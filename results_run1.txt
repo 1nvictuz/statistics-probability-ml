@@ -1,0 +1,71 @@
+Statistics and Probability for Machine Learning Assignment
+Python: 3.12.10
+pandas: 3.1.0
+SciPy: 1.18.1
+statsmodels: 0.15.0
+Rows: 30; columns: 7
+
+Missing values:
+column_name    0
+column_1       0
+column_2       0
+group          0
+feature_1      0
+feature_2      0
+target         0
+
+Descriptive statistics:
+       column_name   column_1   column_2 group  feature_1  feature_2     target
+count           30  30.000000  30.000000    30  30.000000  30.000000  30.000000
+unique           2        NaN        NaN     3        NaN        NaN        NaN
+top        value_1        NaN        NaN     A        NaN        NaN        NaN
+freq            20        NaN        NaN    10        NaN        NaN        NaN
+mean           NaN   2.676667   1.686667   NaN   1.310000   0.626667   0.733333
+std            NaN   0.624049   0.595230   NaN   0.282049   0.219613   0.449776
+min            NaN   1.600000   0.800000   NaN   0.800000   0.100000   0.000000
+25%            NaN   2.225000   1.300000   NaN   1.100000   0.500000   0.250000
+50%            NaN   2.700000   1.600000   NaN   1.300000   0.700000   1.000000
+75%            NaN   3.000000   1.975000   NaN   1.500000   0.800000   1.000000
+max            NaN   4.500000   3.500000   NaN   1.900000   0.900000   1.000000
+
+Probability(target=1): 73.33%
+
+Welch t-test (column_1; A vs B): t=3.6284; p=0.002371
+
+Correlation matrix:
+           column_1  column_2  feature_1  feature_2    target
+column_1   1.000000  0.410380  -0.543261   0.402238 -0.428348
+column_2   0.410380  1.000000  -0.290841   0.351017 -0.181181
+feature_1 -0.543261 -0.290841   1.000000  -0.344039  0.483839
+feature_2  0.402238  0.351017  -0.344039   1.000000 -0.169894
+target    -0.428348 -0.181181   0.483839  -0.169894  1.000000
+
+OLS summary:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              feature_1   R-squared:                       0.301
+Model:                            OLS   Adj. R-squared:                  0.249
+Method:                 Least Squares   F-statistic:                     5.804
+Date:                Fri, 30 Oct 2026   Prob (F-statistic):            0.00800
+Time:                        00:09:24   Log-Likelihood:                 1.2752
+No. Observations:                  30   AIC:                             3.450
+Df Residuals:                      27   BIC:                             7.653
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          1.9919      0.207      9.634      0.000       1.568       2.416
+column_1      -0.2304      0.080     -2.888      0.008      -0.394      -0.067
+column_2      -0.0387      0.084     -0.463      0.647      -0.210       0.133
+==============================================================================
+Omnibus:                        1.130   Durbin-Watson:                   1.855
+Prob(Omnibus):                  0.568   Jarque-Bera (JB):                0.285
+Skew:                          -0.112   Prob(JB):                        0.867
+Kurtosis:                       3.422   Cond. No.                         16.4
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Caution: This sample is small. Hypothesis-test assumptions, independence, and possible data selection need review; association is not causation.
